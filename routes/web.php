@@ -24,6 +24,10 @@ Route::get('/dashboard', function () {
     return view('dashboard')->with(compact("usuarios"));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('menuApi', function(){
+    return view('api');
+});
+
 Route::post('show_user', [UserController::class, 'show']);
 
 Route::post('update_user', [UserController::class, 'update'])->name('update_user');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules;
 
@@ -74,7 +75,16 @@ class UserController extends Controller
      */
     public function update(Request $request)
     {
-        dd($request);
+        User::where('id', $request->id)
+        ->update([
+            'rfc' => $request->rfc,
+            'phone' => $request->phone,
+            'notas' => $request->notas,
+            'name' => $request->name,
+            'email' => $request->email,
+        ]);
+
+        return Redirect::back()->with('success','Registro creado satisfactoriamente');
     }
 
     /**

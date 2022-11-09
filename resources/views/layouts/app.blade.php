@@ -109,20 +109,18 @@
         <div class="container-fluid mt-5">
             <div class="row">
                 <div class="col-2">
-                    <ul class="nav flex-column nav-pills nav-fill text-left">
-                        <li class="nav-item">
-                          <a class="nav-link active" href="#">Usuarios</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
-                      </ul>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="nav flex-column nav-pills nav-fill  text-left">
+                                <li class="nav-item">
+                                <a class="nav-link" href="{{url("dashboard")}}">Usuarios</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="{{url("menuApi")}}">API</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-10">
                     <div class="">
